@@ -1,0 +1,67 @@
+Inicio
+Programa: Preguntas y Respuestas
+	ENTORNO: $answer='z',$respuesta
+	      MIENTRAS(continuar)
+	    	  SI(answer == 'z')
+	    	  LEER<<"------------------------------"
+	    	  LEER<<"Juego de preguntas y respuestas"
+	    	  LEER<<"------------------------------"
+	    	  LEER<<endl;
+	    	  LEER<<"Elegir una categoria del juego"
+	    	  LEER<<"A-Futbol"<<"      "<<"B-Naturaleza"
+	    	  LEER<<"S-Salir"
+	    	  ESCRIBIR>>answer
+	          
+            BORRARTODO
+	    	  SI (answer =='A'||answer == 'a')
+	    		  SI(SIGUIENTE == falso)
+	    		  LEER<<"¿Cuales son los colores de San lorenzo?"
+	    		  LEER<<"1-Negro y Rojo"
+	    		  LEER<<"2-Rojo y Azul"
+	    		  LESCRIBIReer<<"3-Negro y Azul"
+	    		  ESCRIBIR>>respuesta
+	    		 CASOS(respuesta)
+
+	    		 CASO '1':
+	    			 LEER<<"Incorrecto"
+	    		
+	    			 SIGUIENTE = verdadero
+	    		 CASO '2':
+	    			 LEER<<"Correcto"
+	    			 SIGUIENTE = verdadero
+	    		
+
+	    		 CASO '3':
+	    			 LEER<<"Incorrecto"
+	    			 SIGUIENTE = verdadero
+	    		
+	    		 SI NO:
+	    			 LEER<<"Esa opcion no es correcta"
+	    			    		 SI(SIGUIENTE == verdadero)
+	    		 BORRARTODO
+	    			 LEER<<"¿Cual es el equipo al que a los hinchas se los consideran gallinas?"
+	    			 LEER<<"1-River"
+	    			 LEER<<"2-Independiente"
+	    			 LEER<<"3-Boca"
+	    			 ESCRIBIR>>respuesta
+	    			 CASOS(respuesta)
+
+	    			 	 CASO '1':
+	    			 	 LEER<<"Correcto"
+	    			 	
+	    			 	 SIGUIENTE = falso;
+	    			 	 CASO '2':
+	    			 	 LEER<<"Incorrecto"
+	    			 	 SIGUIENTE = falso
+	    			 	 
+
+	    			 	 CASO '3':
+	    			 	 LEER<<"Incorrecto"
+	    			 	 SIGUIENTE = falso
+	    			 	  
+	    			 	 SI NO:
+	    			 	 LEER<<"Esa opcion no es correcta"
+	      SI NO
+	    	  SI(answer =='B'||answer == 'b')
+            SI(answer =='S'||answer == 's')
+FINPROGRAMA
